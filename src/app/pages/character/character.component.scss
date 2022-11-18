@@ -1,0 +1,50 @@
+@import "styles/variables";
+
+.character-section {
+  min-height: 100vh;
+  background-color: #6c4ab6;
+  color: white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.title {
+  font-size: 3.2rem;
+  text-align: center;
+  color: $color-diamond
+}
+.main-text {
+  color: white;
+  font-weight: 800;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 20rem);
+  grid-column-gap: 3rem;
+  grid-row-gap: 2rem;
+  padding: 2rem;
+  justify-content: center;
+}
+.character {
+  background-color: $color-medium-purple;
+  color: $color-white;
+  font-weight: 700;
+  min-height: 25rem;
+  border-radius: 0.4rem;
+  font-size: 1.6rem;
+  border: 0.2rem solid $color-jordy-blue;
+  display: flex;
+  flex-direction: column;
+  transition: 0.2s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow:
+    0 0 1rem 1rem rgba(0, 0, 0, 0.15);
+  ;
+  }
+}
+.name {
+  padding: 1rem;
+  text-align: center;
+}
+

@@ -1,0 +1,14 @@
+<section class="character-section">
+  <h1 class="title">Rick & Morty characters</h1>
+  <app-paginator [total]="total" [currentPage]="currentPage" (goToPageEvent)="getCharacters($event)"></app-paginator>
+  <app-loader *ngIf="loading$ | async"></app-loader>
+  <div class="main-text">
+    <div class="character" *ngFor="let character of characters">
+      <div class="image-container">
+      <img [src]="character.image" alt = "">
+      </div>
+      <span class="name">{{character.name}}</span>
+    </div>
+  </div>
+  <app-paginator [total]="total" [currentPage]="currentPage" (goToPageEvent)="getCharacters($event)"></app-paginator>
+</section>
